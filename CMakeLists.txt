@@ -10,8 +10,8 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp)
-target_link_libraries(main PRIVATE sfml-graphics)
+add_executable(main  "src/Game.cpp" "src/Game.h" "src/main.cpp")
+target_link_libraries(main PRIVATE sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 target_compile_features(main PRIVATE cxx_std_17)
 
 if(WIN32)
