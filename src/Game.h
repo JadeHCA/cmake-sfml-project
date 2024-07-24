@@ -19,4 +19,10 @@ class Game
 
  private:
   sf::RenderWindow& window;
+
+
+  sf::Sprite sprite;
+  sf::Texture texture;
+  void moveSpriteToCursor(sf::Sprite sprite);
+
 };
